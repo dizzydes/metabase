@@ -7,7 +7,6 @@ import Visualization, {
   ERROR_MESSAGE_GENERIC,
   ERROR_MESSAGE_PERMISSION,
 } from "metabase/visualizations/components/Visualization.jsx";
-import QueryDownloadWidget from "metabase/query_builder/components/QueryDownloadWidget";
 
 import ModalWithTrigger from "metabase/components/ModalWithTrigger.jsx";
 import ChartSettings from "metabase/visualizations/components/ChartSettings.jsx";
@@ -164,17 +163,7 @@ export default class DashCard extends Component {
                   this.props.onReplaceAllVisualizationSettings
                 }
               />
-            ) : isEmbed ? (
-              <QueryDownloadWidget
-                className="m1 text-brand-hover text-light"
-                classNameClose="hover-child"
-                card={dashcard.card}
-                params={params}
-                dashcardId={dashcard.id}
-                token={dashcard.dashboard_id}
-                icon="download"
-              />
-            ) : (
+            ) : isEmbed ? () : (
               undefined
             )
           }
