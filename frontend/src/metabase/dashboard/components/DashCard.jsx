@@ -163,9 +163,7 @@ export default class DashCard extends Component {
                   this.props.onReplaceAllVisualizationSettings
                 }
               />
-            ) : isEmbed ? () : (
-              undefined
-            )
+            ) : undefined
           }
           onUpdateVisualizationSettings={
             this.props.onUpdateVisualizationSettings
