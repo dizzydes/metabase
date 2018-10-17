@@ -21,8 +21,8 @@ export default class LogoIcon extends Component {
         className={cx("Icon", { "text-brand": !dark }, { "text-white": dark })}
         width={width || size}
         height={height || size}
-        src="https://boulanger.scene7.com/is/image/Boulanger/8055002395939_h_f_l_0?hei=800&wid=800"        
-      >
+        src="https://boulanger.scene7.com/is/image/Boulanger/8055002395939_h_f_l_0?hei=800&wid=800"
+      />
     );
   }
 }
