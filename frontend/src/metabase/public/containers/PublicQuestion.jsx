@@ -165,14 +165,7 @@ export default class PublicQuestion extends Component {
     const { params: { uuid, token } } = this.props;
     const { card, result, parameterValues } = this.state;
 
-    const actionButtons = result && (
-      <QueryDownloadWidget
-        className="m1 text-medium-hover"
-        uuid={uuid}
-        token={token}
-        result={result}
-      />
-    );
+    const actionButtons = result;
 
     return (
       <EmbedFrame

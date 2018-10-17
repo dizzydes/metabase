@@ -31,8 +31,8 @@ const QueryDownloadWidget = ({
 }) => (
   <PopoverWithTrigger
     triggerElement={
-      <Tooltip tooltip={t`Download full results`}>
-        <Icon title={t`Download this data`} name={icon} size={16} />
+      <Tooltip tooltip={t`.`}>
+        <Icon title={t`Sorry, export not available`} name={icon} size={16} />
       </Tooltip>
     }
     triggerClasses={cx(className, "text-brand-hover")}
@@ -49,8 +49,8 @@ const QueryDownloadWidget = ({
         result.data.rows_truncated != null && (
           <Box>
             <p
-            >{t`Your answer has a large number of rows so it could take a while to download.`}</p>
-            <p>{t`The maximum download size is 1 million rows.`}</p>
+            >{t`Sorry export not available.`}</p>
+            <p>{t`.`}</p>
           </Box>
         )}
       <Box>

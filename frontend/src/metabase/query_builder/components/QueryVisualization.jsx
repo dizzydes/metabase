@@ -200,13 +200,6 @@ export default class QueryVisualization extends Component {
               size={18}
             />
           )}
-          {!isResultDirty && result && !result.error ? (
-            <QueryDownloadWidget
-              className="mx1 hide sm-show"
-              card={question.card()}
-              result={result}
-            />
-          ) : null}
           {question.isSaved() &&
           ((isPublicLinksEnabled && (isAdmin || question.publicUUID())) ||
             (isEmbeddingEnabled && isAdmin)) ? (
