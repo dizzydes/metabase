@@ -89,37 +89,7 @@ class Overworld extends React.Component {
             );
 
             if (!pinnedDashboards.length > 0) {
-              return (
-                <CandidateListLoader>
-                  {({ candidates, sampleCandidates, isSample }) => {
-                    // if there are no items to show then just hide the section
-                    if (!candidates && !sampleCandidates) {
-                      return null;
-                    }
-                    return (
-                      <Box mx={PAGE_PADDING} mt={[1, 3]}>
-                        {user.is_superuser && <AdminPinMessage />}
-                        <Box mt={[1, 3]}>
-                          <Flex align="center">
-                            <SectionHeading>
-                              {t`Try these x-rays based on your data.`}
-                            </SectionHeading>
-                          </Flex>
-                          <Box>
-                            <ExplorePane
-                              candidates={candidates}
-                              withMetabot={false}
-                              title=""
-                              gridColumns={[1, 1 / 3]}
-                              asCards={true}
-                            />
-                          </Box>
-                        </Box>
-                      </Box>
-                    );
-                  }}
-                </CandidateListLoader>
-              );
+              return null;
             }
 
             if (items.length === 0) {
