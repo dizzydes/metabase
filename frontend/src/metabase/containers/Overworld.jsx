@@ -98,7 +98,6 @@ class Overworld extends React.Component {
 
             return (
               <Box px={PAGE_PADDING} mt={2}>
-                <SectionHeading>{t`Start here`}</SectionHeading>
                 <Grid>
                   {pinnedDashboards.map(pin => {
                     return (
@@ -249,7 +248,7 @@ export const PIN_MESSAGE_STORAGE_KEY =
 
 export class AdminPinMessage extends React.Component {
   state = {
-    showMessage: !window.localStorage.getItem(PIN_MESSAGE_STORAGE_KEY),
+    showMessage: false,
   };
 
   dismissPinMessage = () => {
@@ -257,41 +256,7 @@ export class AdminPinMessage extends React.Component {
     this.setState({ showMessage: false });
   };
   render() {
-    const { showMessage } = this.state;
-
-    if (!showMessage) {
-      return null;
-    }
-
-    const link = (
-      <Link className="link" to={Urls.collection()}>{t`Our analytics`}</Link>
-    );
-
-    return (
-      <Box>
-        <SectionHeading>{t`Start here`}</SectionHeading>
-
-        <Flex
-          bg={colors["bg-medium"]}
-          p={2}
-          align="center"
-          style={{ borderRadius: 6 }}
-          className="hover-parent hover--visibility"
-        >
-          <Icon name="dashboard" color={colors["brand"]} size={32} mr={1} />
-          <Box ml={1}>
-            <h3>{t`Your team's most important dashboards go here`}</h3>
-            <p className="m0 text-medium text-bold">{jt`Pin dashboards in ${link} to have them appear in this space for everyone`}</p>
-          </Box>
-          <Icon
-            className="hover-child text-brand-hover cursor-pointer bg-medium"
-            name="close"
-            ml="auto"
-            onClick={() => this.dismissPinMessage()}
-          />
-        </Flex>
-      </Box>
-    );
+    return null;
   }
 }
 
