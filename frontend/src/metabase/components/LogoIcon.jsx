@@ -21,7 +21,7 @@ export default class LogoIcon extends Component {
         className={cx("Icon", { "text-brand": !dark }, { "text-white": dark })}
         width={width || size}
         height={height || size}
-        src="https://boulanger.scene7.com/is/image/Boulanger/8055002395939_h_f_l_0?hei=800&wid=800"
+        src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Cat_Emoji_Icon_d84dab9b-e144-4e75-a859-5442a109e95b_large.png?v=1513251058"
       />
     );
   }
